@@ -9,19 +9,38 @@ import time
 import zipfile
 
 # Page title
-st.set_page_config(page_title='ML Model Building', page_icon='🤖')
-st.title('🤖 ML Model Building')
+st.set_page_config(page_title='GAN-Powered Intrusion Detection System', page_icon='🤖')
+st.title('🤖 GAN-Powered Intrusion Detection System')
+st.header("AI-894: Design and Implementation of AI Systems")
+st.markdown("Created by: Abebual Zerihun Demilew")
+
+st.markdown("---")
+st.markdown("""
+      
+            
+    This advanced intrusion detection system leverages Conditional Generative Adversarial Networks (CGAN) to generate various synthetic IoT attack dataset and implements a lightGBM multi-class classification model to detect the type of intrusion. The CGAN model was trained on RT-IOT2022 data that can be found here: 
+
+            
+        
+    https://archive.ics.uci.edu/dataset/942/rt-iot2022         
+"""
+)
+st.markdown("---")
 
 with st.expander('About this app'):
   st.markdown('**What can this app do?**')
-  st.info('This app allow users to build a machine learning (ML) model in an end-to-end workflow. Particularly, this encompasses data upload, data pre-processing, ML model building and post-model analysis.')
+  st.info('This app employs a sophisticate end-to-end workflow designed to enhance cybersecurity in the Internet of Things (IoT) domain. The application allow users:')
+  st.info('**Generate synthetic IoT intrusion data:** At the heart of the process lies the utilization of advanced Conditional Generative Adversarial Networks (cGANs). These networks are adept at creating synthetic data that mimics real-world IoT intrusion scenarios, simulating realistic cybersecurity threats.')
+  st.info('**Data Pre-processing:** Once the synthetic data is generated, the data is then undergoes pre-processing to align its structure with the format used during the training of the LightGBM multi-class classification model, ensuring consistency and accuracy.')
+  st.info('**Machine Learning Model Inference:** The pre-processed data is then fed into a LightGBM multi-class classification machine learning model. This model is trained to recognize and categorize various types of IoT intrusion attacks, making it a powerful tool for cybersecurity.')
+  st.info('**Post-Model Insights:** After the model makes its predictions, the application provides insights to understand the types of attacks and their characteristics. Its a critical step for cybersecurity professionals to take informed actions and strengthen IoT security measures.')
 
   st.markdown('**How to use the app?**')
-  st.warning('To engage with the app, go to the sidebar and 1. Select a data set and 2. Adjust the model parameters by adjusting the various slider widgets. As a result, this would initiate the ML model building process, display the model results as well as allowing users to download the generated models and accompanying data.')
+  st.warning('To engage with the app, go to the sidebar and 1. Simulate realistic Iot intrusion data 2. Upload generated data for pre-processing and Inference. As a result, display the attack type prediction results as well as insight on characterstics of the attack.')
 
   st.markdown('**Under the hood**')
   st.markdown('Data sets:')
-  st.code('''- Drug solubility data set
+  st.code('''- RT-IOT2022 data set
   ''', language='markdown')
   
   st.markdown('Libraries used:')
